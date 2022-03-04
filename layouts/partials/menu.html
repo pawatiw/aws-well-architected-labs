@@ -99,7 +99,7 @@
     {{safeHTML .Params.head}}
     {{ $isParent := or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
     {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item
+    <li data-nav-id="{.URL}" title="{{.Title}}" class="dd-item
     {{if $isParent }}parent{{end}}
         {{if eq .File.UniqueID $currentNode.File.UniqueID}}active{{end}}
         ">
